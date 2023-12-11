@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CompetitionsComponent } from './components/dashboard/competitions/competitions.component';
-import { RegisterComponent } from './components/dashboard/register/register.component';
 import { PodiumComponent } from './components/dashboard/podium/podium.component';
 import { ResultsComponent } from './components/dashboard/results/results.component';
+import { MembersComponent } from './components/dashboard/members/members.component';
 
 const routes: Routes = [
   {
@@ -12,9 +12,9 @@ const routes: Routes = [
     title : 'Competitions Page'
   },
   {
-    path : 'Register',
-    component : RegisterComponent ,
-    title : 'Register Page'
+    path : 'Members',
+    component : MembersComponent ,
+    title : 'Members Page'
   },
   {
     path : 'Podium',

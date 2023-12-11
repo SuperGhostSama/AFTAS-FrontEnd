@@ -3,4 +3,5 @@
     background-color: #691b1b;
     border-bottom: 2px solid #000; /* You can adjust the color and thickness of the line */
     display: inline-block;
+    font-weight: bold;
 }
