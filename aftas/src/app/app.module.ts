@@ -11,6 +11,9 @@ import { PodiumComponent } from './components/dashboard/podium/podium.component'
 import { ResultsComponent } from './components/dashboard/results/results.component';
 import { MembersComponent } from './components/dashboard/members/members.component';
 import { CompetitionsModalComponent } from './components/dashboard/competitions-modal/competitions-modal.component';
+import { SelectCompetitionComponent } from './components/dashboard/select-competition/select-competition.component';
+import { ViewMembersComponent } from './components/dashboard/view-members/view-members.component';
+import { AddMembersComponent } from './components/dashboard/add-members/add-members.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { CompetitionsModalComponent } from './components/dashboard/competitions-
     ResultsComponent,
     MembersComponent,
     CompetitionsModalComponent,
+    SelectCompetitionComponent,
+    ViewMembersComponent,
+    AddMembersComponent,
   ],
   imports: [
     BrowserModule,

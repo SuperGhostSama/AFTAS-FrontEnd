@@ -1,1 +1,40 @@
-<p>members works!</p>
+<app-select-competition></app-select-competition>
+
+<div>
+    <div class="d-flex justify-content-end mb-3 mt-5">
+        <a class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#add-member"><i class="bi bi-plus-circle me-1"></i>Add Member</a>
+        <a class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#view-members"><i class="bi bi-person-lines-fill me-1"></i>View Members</a>
+    </div>
+
+    <div class="border border-5 p-3">
+        <table class="table " style="width:100%" id="membersTable">
+        <thead>
+        <tr>
+            <th scope="col" class="text-center">Num</th>
+            <th scope="col" class="text-center">First Name</th>
+            <th scope="col" class="text-center">Family Name</th>
+            <th scope="col" class="text-center">Accession Date</th>
+            <th scope="col" class="text-center">Nationality</th>
+            <th scope="col" class="text-center">Identity Document</th>
+            <th scope="col" class="text-center">Identity Number</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th scope="row" class="text-center">234567HDSJ321</th>
+            <td class="text-center">SalahEddine</td>
+            <td class="text-center">Hanaoui</td>
+            <td class="text-center">2023-12-24</td>
+            <td class="text-center">Morroccan</td>
+            <td class="text-center">CIN</td>
+            <td class="text-center">HA319899</td>
+        </tr>
+        
+        </tbody>
+        </table>
+    </div>
+</div>
+<app-view-members></app-view-members>
+<app-add-members></app-add-members>
+
