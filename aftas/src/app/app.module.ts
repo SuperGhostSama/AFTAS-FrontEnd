@@ -14,6 +14,8 @@ import { CompetitionsModalComponent } from './components/dashboard/competitions-
 import { SelectCompetitionComponent } from './components/dashboard/select-competition/select-competition.component';
 import { ViewMembersComponent } from './components/dashboard/view-members/view-members.component';
 import { AddMembersComponent } from './components/dashboard/add-members/add-members.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AddMembersComponent } from './components/dashboard/add-members/add-memb
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
