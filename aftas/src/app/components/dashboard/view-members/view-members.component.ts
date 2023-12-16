@@ -65,4 +65,6 @@ export class ViewMembersComponent implements OnInit, AfterViewInit{
       this.dataTable.draw();
     }
   }
+
+
 }

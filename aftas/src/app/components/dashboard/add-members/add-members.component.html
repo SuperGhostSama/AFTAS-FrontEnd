@@ -7,30 +7,31 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="add-member-form">
+                <form id="add-member-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="member.name">
                     </div>
                     <div class="mb-3">
                         <label for="familyName" class="form-label">Family Name</label>
-                        <input type="text" class="form-control" id="familyName" name="familyName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="accessDate" class="form-label">Access Date</label>
-                        <input type="date" class="form-control" id="accessDate" name="accessDate" required>
+                        <input type="text" class="form-control" id="familyName" name="familyName" required [(ngModel)]="member.familyName">
                     </div>
                     <div class="mb-3">
                         <label for="nationality" class="form-label">Nationality</label>
-                        <input type="text" class="form-control" id="nationality" name="nationality" required>
+                        <input type="text" class="form-control" id="nationality" name="nationality" required [(ngModel)]="member.nationality">
                     </div>
                     <div class="mb-3">
                         <label for="identityDocumentType" class="form-label">Identity Document Type</label>
-                        <input type="text" class="form-control" id="identityDocumentType" name="identityDocumentType" required>
-                    </div>
+                        <select class="form-select" id="identityDocumentType" name="identityDocumentType" required [(ngModel)]="member.identityDocumentType">
+                          <option value="NATIONAL_IDENTITY_CARD">National Identity Card</option>
+                          <option value="PASSPORT">Passport</option>
+                          <option value="DRIVING_LICENSE">Driving License</option>
+                          <option value="OTHER">Other</option>
+                        </select>
+                      </div>                      
                     <div class="mb-3">
                         <label for="identityNumber" class="form-label">Identity Number</label>
-                        <input type="text" class="form-control" id="identityNumber" name="identityNumber" required>
+                        <input type="text" class="form-control" id="identityNumber" name="identityNumber" required [(ngModel)]="member.identityNumber">
                     </div>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
