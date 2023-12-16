@@ -1,8 +1,6 @@
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CompetitionService } from 'src/app/services/Competition/competition.service';
-import { Router } from '@angular/router';
-import { CompetitionsComponent } from '../competitions/competitions.component';
 
 @Component({
   selector: 'app-competitions-modal',
