@@ -32,4 +32,9 @@ export class MemberService {
   searchMember(name: string): Observable<any> {
     return this.http.get(`${environment.membersApi}/search?name=${name}`);
   }
+  
+  getMembersByCompetitionId(competitionId: number): Observable<any> {
+    const url = `${environment.membersApi}/byCompetition/${competitionId}`;
+    return this.http.get(url);
+  }
 }
