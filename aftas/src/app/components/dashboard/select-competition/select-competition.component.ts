@@ -40,13 +40,21 @@ export class SelectCompetitionComponent {
   }
 
 
-  onSubmit(): void {
-    // Handle form submission
-    console.log('Selected Competition id:', this.selectedCompetitionId);
+  // onSubmit(): void {
+  //   // Handle form submission
+  //   console.log('Selected Competition id:', this.selectedCompetitionId);
     
-    // Set the selectedCompetitionId in the SharedService
+  //   // Set the selectedCompetitionId in the SharedService
+  //   this.sharedService.setSelectedCompetitionId(this.selectedCompetitionId);
+
+  // }
+
+  onSelectChange(): void {
+    // Handle the change in the selected competition
+    console.log('Selected Competition id:', this.selectedCompetitionId);
+  
+    // Call the method to get members by competition ID
     this.sharedService.setSelectedCompetitionId(this.selectedCompetitionId);
-
   }
-
+  
 }

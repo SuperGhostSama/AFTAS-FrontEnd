@@ -10,7 +10,7 @@ declare var $: any;
   templateUrl: './members.component.html',
   styleUrls: ['./members.component.css']
 })
-export class MembersComponent implements OnInit, AfterViewInit, OnDestroy {
+export class MembersComponent implements OnInit, OnDestroy {
   selectedCompetitionId: string = '';
   memberInThisCompetition: any[] = [];
   dataTable: any;
@@ -45,9 +45,6 @@ export class MembersComponent implements OnInit, AfterViewInit, OnDestroy {
     );
   }
 
-  ngAfterViewInit(): void {
-    // Initialize DataTable here if needed, but it's not necessary since it's now done in refreshDataTable
-  }
 
   refreshDataTable(): void {
     if (!this.dataTable) {
