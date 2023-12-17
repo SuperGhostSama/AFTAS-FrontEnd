@@ -3,6 +3,9 @@ import { Subscription } from 'rxjs';
 import { SharedService } from 'src/app/services/SharedServices/shared.service';
 import { MemberService } from 'src/app/services/Member/member.service';
 import { CompetitionService } from 'src/app/services/Competition/competition.service';
+import { RankingService } from 'src/app/services/Ranking/ranking.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-add-member-competition',
@@ -13,13 +16,14 @@ export class AddMemberCompetitionComponent implements OnDestroy {
   private subscription: Subscription;
   competitions: any[] = [];
   members: any[] = [];
-  selectedCompetition: string = '';
-  selectedMember: string = '';
+  selectedCompetitionId: string = '';
+  selectedMemberId: string = '';
 
   constructor(
     private sharedService: SharedService,
     private memberService: MemberService,
-    private competitionService: CompetitionService
+    private competitionService: CompetitionService,
+    private rankingService: RankingService
   ) {
     // Subscribe to the trigger to perform fetch
     this.subscription = this.sharedService.triggerFetch$.subscribe(() => {
@@ -48,14 +52,31 @@ export class AddMemberCompetitionComponent implements OnDestroy {
     );
   }
 
-  // Method to save changes
   saveChanges(): void {
     // Add your logic to save the selected competition and member
-    console.log('Selected Competition ID:', this.selectedCompetition);
-    console.log('Selected Member ID:', this.selectedMember);
+    console.log('Selected Competition ID:', this.selectedCompetitionId);
+    console.log('Selected Member ID:', this.selectedMemberId);
 
-    // Close the modal if needed
-    // $('#addMemberToCompetition').modal('hide');
+    // Create a ranking object with the selected competition and member
+    const ranking = {
+      competition: {
+        "id" : this.selectedCompetitionId
+      },
+      member: {
+        "id" : this.selectedMemberId
+      }
+    };
+
+    // Call the service method to register the member for the competition
+    this.rankingService.registerMemberForCompetition(ranking).subscribe(
+      (response) => {
+        console.log('Member registered for competition successfully:', response);
+        location.reload();
+      },
+      (error) => {
+        console.error('Error registering member for competition:', error);
+      }
+    );
   }
 
   ngOnDestroy(): void {

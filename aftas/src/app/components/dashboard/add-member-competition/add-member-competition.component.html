@@ -9,14 +9,14 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="competitionSelect" class="form-label">Select Competition</label>
-            <select class="form-select" id="competitionSelect" [(ngModel)]="selectedCompetition">
+            <select class="form-select" id="competitionSelect" [(ngModel)]="selectedCompetitionId">
               <option *ngFor="let competition of competitions" [value]="competition.id">{{ competition.code }}</option>
             </select>
           </div>
   
           <div class="mb-3">
             <label for="memberSelect" class="form-label">Select Member</label>
-            <select class="form-select" id="memberSelect" [(ngModel)]="selectedMember">
+            <select class="form-select" id="memberSelect" [(ngModel)]="selectedMemberId">
               <option *ngFor="let member of members" [value]="member.id">{{ member.name }} {{ member.familyName }}</option>
             </select>
           </div>
