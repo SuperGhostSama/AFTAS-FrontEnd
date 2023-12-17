@@ -1,6 +1,6 @@
 # AFTAS-FrontEnd
 
-This repository contains the source code for the AFTAS (Anglers' Fish Tracking and Scoring) Angular 16 frontend. The frontend interacts with the AFTAS Java Spring Boot API to provide a user interface for managing members, levels, fishes, competitions, rankings, and huntings in the context of an angling competition.
+This repository contains the source code for the AFTAS Angular 16 frontend. The frontend interacts with the AFTAS Java Spring Boot API to provide a user interface for managing members, levels, fishes, competitions, rankings, and huntings in the context of an angling competition.
 
 ## Prerequisites
 
