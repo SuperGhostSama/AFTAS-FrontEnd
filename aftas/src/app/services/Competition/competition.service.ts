@@ -17,6 +17,10 @@ export class CompetitionService {
     return this.http.get(environment.competitionsApi);
   }
 
+  getUpcomingCompetitions(): Observable<any> {
+    return this.http.get(`${environment.competitionsApi}/upcoming`);
+  }
+
   addCompetition(competitionRequest: any): Observable<any> {
     return this.http.post(environment.competitionsApi, competitionRequest);
   }
@@ -28,4 +32,6 @@ export class CompetitionService {
   deleteCompetition(id: number): Observable<any> {
     return this.http.delete(`${environment.competitionsApi}/${id}`);
   }
+
+
 }
