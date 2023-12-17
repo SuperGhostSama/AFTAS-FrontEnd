@@ -36,6 +36,11 @@ npm install
 
 Please ensure that your AFTAS Java Spring Boot API is up and running before using this frontend. Follow the instructions in the AFTAS API repository to set it up properly.
 
+```bash
+git clone https://github.com/SuperGhostSama/AFTAS-API
+cd AFTAS-API
+```
+
 Run the application using the following command:
 
 ```
