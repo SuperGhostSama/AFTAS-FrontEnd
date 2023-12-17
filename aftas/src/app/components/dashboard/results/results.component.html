@@ -1,7 +1,7 @@
 <div class="border border-5 p-5">
   <form>
     <div class="mb-3">
-      <label for="selectOption" class="form-label">Open Competitions</label>
+      <label for="selectOption" class="form-label">Competitions</label>
       <select class="form-select" id="selectOption" name="selectOption" [(ngModel)]="selectedOpenCompetitionId" (ngModelChange)="onSelectChange()">
         <option *ngFor="let competition of openCompetitions" [value]="competition.id">
           {{ competition.code }}
@@ -37,8 +37,8 @@
       </div>
       
 
-      <!-- <button type="submit" class="btn btn-primary" [disabled]="!selectedOpenCompetitionsMembersId || !selectedFishId">Submit</button> -->
+      <button type="submit" class="btn btn-primary" [disabled]="!selectedOpenCompetitionsMembersId || !selectedFishId || !fishWeight ">Submit</button>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
     </form>
 </div>
