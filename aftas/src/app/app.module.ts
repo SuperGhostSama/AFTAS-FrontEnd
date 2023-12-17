@@ -16,6 +16,7 @@ import { ViewMembersComponent } from './components/dashboard/view-members/view-m
 import { AddMembersComponent } from './components/dashboard/add-members/add-members.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AddMemberCompetitionComponent } from './components/dashboard/add-member-competition/add-member-competition.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     SelectCompetitionComponent,
     ViewMembersComponent,
     AddMembersComponent,
+    AddMemberCompetitionComponent,
   ],
   imports: [
     BrowserModule,

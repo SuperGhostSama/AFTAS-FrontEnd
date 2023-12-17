@@ -1,6 +1,8 @@
+
 <div class="d-flex justify-content-end mb-3 mt-5">
+    <a (click)="triggerFetch()" class="btn btn-success me-1" data-bs-toggle="modal" data-bs-target="#addMemberToCompetition"><i class="bi bi-plus-circle me-1"></i>Add Member To Competition</a>
+    <a class="btn btn-secondary me-1" data-bs-toggle="modal" data-bs-target="#view-members"><i class="bi bi-person-lines-fill me-1"></i>View Members</a>
     <a class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#add-member"><i class="bi bi-plus-circle me-1"></i>Add New Member</a>
-    <a class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#view-members"><i class="bi bi-person-lines-fill me-1"></i>View Members</a>
 </div>
 <app-select-competition></app-select-competition>
 
@@ -36,6 +38,8 @@
         </table>
     </div>
 </div>
-<app-view-members></app-view-members>
+
+<app-add-member-competition></app-add-member-competition>
 <app-add-members></app-add-members>
+<app-view-members></app-view-members>
 

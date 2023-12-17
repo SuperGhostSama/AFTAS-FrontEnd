@@ -74,4 +74,9 @@ export class MembersComponent implements OnInit, OnDestroy {
     // Unsubscribe to avoid memory leaks
     this.subscription.unsubscribe();
   }
+
+  // Method to trigger fetch when the button is clicked
+  triggerFetch(): void {
+    this.sharedService.triggerFetchData();
+  }
 }
