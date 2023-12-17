@@ -1,13 +1,14 @@
 
 <app-select-competition></app-select-competition>
 
-<div class="container podium justify-content-center mt-5">
+<div id="podiumDiv">
+  <div class="container podium justify-content-center mt-5">
     <div class="podium__item">
-      <p class="podium__city">Annecy</p>
+      <p class="podium__city">{{ membersRanking[1]?.name }}</p>
       <div class="podium__rank second">2</div>
     </div>
     <div class="podium__item">
-      <p class="podium__city">Saint-Gervais</p>
+      <p class="podium__city">{{ membersRanking[0]?.name }}</p>
       <div class="podium__rank first">
         <svg class="podium__number" viewBox="0 0 27.476 75.03" xmlns="http://www.w3.org/2000/svg">
         <g transform="matrix(1, 0, 0, 1, 214.957736, -43.117417)">
@@ -17,7 +18,8 @@
       </div>
   </div>
     <div class="podium__item">
-      <p class="podium__city">Clermont-Ferrand Essentielle</p>
+      <p class="podium__city">{{ membersRanking[0]?.name }}</p>
       <div class="podium__rank third">3</div>
     </div>
   </div>
+</div>
