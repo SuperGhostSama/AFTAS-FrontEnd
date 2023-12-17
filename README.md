@@ -34,6 +34,8 @@ npm install
 
 ## Running the Application
 
+Please ensure that your AFTAS Java Spring Boot API is up and running before using this frontend. Follow the instructions in the AFTAS API repository to set it up properly.
+
 Run the application using the following command:
 
 ```
